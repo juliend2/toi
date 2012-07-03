@@ -49,6 +49,7 @@ Changelog
 
 0.5.1
 
+* add some example 'toi' files
 * modified the directory structure to add bin/ and lib/
 
 0.5 
@@ -58,7 +59,6 @@ Changelog
 To do
 -----
 
-* write some examples
 * write some tests
 * write more comments
 
