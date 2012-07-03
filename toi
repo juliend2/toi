@@ -3,19 +3,25 @@
 set task [lindex $argv 0]
 set toifile [pwd]/toi.tcl
 set toibasedir [file dirname [info script]]
+set remote_pwd ""
 
+# include the validations for cli:
 source $toibasedir/cli.tcl
+# include some functions for 'toi':
+source $toibasedir/procs.tcl
+# include the standard 'toi' commands:
+source $toibasedir/commands.tcl
 
 # perform safety checks:
 validate
 
-# include the standard 'toi' commands:
-source $toibasedir/commands.tcl
 # include the user's toi file:
 source $toifile
 
 # Does the called task exist?
 task_exists? $task
+
+set_remote_pwd
 
 # execute the called task:
 puts [$task]
