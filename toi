@@ -6,7 +6,7 @@ set toibasedir [file dirname [info script]]
 
 source $toibasedir/cli.tcl
 
-# safety checks:
+# perform safety checks:
 validate
 
 # include the standard 'toi' commands:
@@ -19,8 +19,6 @@ task_exists? $task
 
 # execute the called task:
 puts [$task]
-
-
 
 
 # vim: set filetype=tcl
