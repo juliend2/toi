@@ -18,6 +18,6 @@ proc deploy {} {
 
 And on in the command line:
   
-  toi deploy
+    toi deploy
 
 
