@@ -20,4 +20,11 @@ And on in the command line:
   
     toi deploy
 
+Installation
+------------
 
+1. `cd ~/bin` (or somewhere else)
+1. `git clone git://github.com/juliend2/toi.git`
+1. now add this line to your `.bashrc` file:
+    export PATH=$PATH:~/bin/toi
+1. `source ~/.bashrc`
