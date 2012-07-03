@@ -2,7 +2,7 @@ Toi
 ===
 
 `toi` is a command line utility and tcl DSL that helps you write scripts to
-interact with with servers via SSH.
+interact with servers via SSH.
 
 Example
 -------
