@@ -2,6 +2,11 @@
 
 set task [lindex $argv 0]
 
+if { [info exists [file dirname [info script]]/toi.tcl] == 0 } {
+  puts "No toi.tcl file found. Please create one."
+  exit
+}
+
 if {$task == ""} {
   puts "Please tell me what task you want me to do."
   exit
