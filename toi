@@ -2,36 +2,25 @@
 
 set task [lindex $argv 0]
 set toifile [pwd]/toi.tcl
+set toibasedir [file dirname [info script]]
 
-# Is there a toi.tcl file in the current directory?
-if { [file exists $toifile] == 0 } {
-  puts "No toi.tcl file found. Please create one."
-  exit
-}
-# Is the toi.tcl file is executable?
-if { [file executable $toifile] == 0 } {
-  puts "The toi.tcl file is not executable."
-  exit
-}
+source $toibasedir/cli.tcl
 
-# Did we pass a task argument?
-if {$task == ""} {
-  puts "Please tell me what task you want me to do."
-  exit
-}
+# safety checks:
+validate
 
-source [file dirname [info script]]/commands.tcl
-# include the toi file
+# include the standard 'toi' commands:
+source $toibasedir/commands.tcl
+# include the user's toi file:
 source $toifile
 
-
 # Does the called task exist?
-if { [info procs $task] == "" } {
-  puts "There is no task named '$task' in $toifile."
-  exit
-}
+task_exists? $task
 
 # execute the called task:
 puts [$task]
+
+
+
 
 # vim: set filetype=tcl
