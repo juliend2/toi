@@ -20,8 +20,10 @@ if {$task == ""} {
   exit
 }
 
+source [file dirname [info script]]/commands.tcl
 # include the toi file
 source $toifile
+
 
 # Does the called task exist?
 if { [info procs $task] == "" } {
@@ -30,6 +32,6 @@ if { [info procs $task] == "" } {
 }
 
 # execute the called task:
-$task
+puts [$task]
 
 # vim: set filetype=tcl
