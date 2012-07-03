@@ -26,7 +26,7 @@ Installation
 
 1. `cd ~/bin` (or somewhere else)
 1. `git clone git://github.com/juliend2/toi.git`
-1. now add this line to your `.bashrc` file: `export PATH=$PATH:~/bin/toi`
+1. now add this line to your `.bashrc` file: `export PATH=$PATH:~/bin/toi/bin`
 1. `source ~/.bashrc`
 
 Available commands
@@ -47,6 +47,10 @@ Available commands
 Changelog
 ---------
 
+0.5.1
+
+* modified the directory structure to add bin/ and lib/
+
 0.5 
 
 * initial (working) version.
@@ -57,5 +61,4 @@ To do
 * write some examples
 * write some tests
 * write more comments
-* change the directory layout a bit
 

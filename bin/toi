@@ -6,11 +6,11 @@ set toibasedir [file dirname [info script]]
 set remote_pwd ""
 
 # include the validations for cli:
-source $toibasedir/cli.tcl
+source $toibasedir/../lib/cli.tcl
 # include some functions for 'toi':
-source $toibasedir/procs.tcl
+source $toibasedir/../lib/procs.tcl
 # include the standard 'toi' commands:
-source $toibasedir/commands.tcl
+source $toibasedir/../lib/commands.tcl
 
 # perform safety checks:
 validate
