@@ -47,6 +47,10 @@ Available commands
 Changelog
 ---------
 
+0.5.2
+
+* catch standard errors in `ssh` command
+
 0.5.1
 
 * add some example 'toi' files

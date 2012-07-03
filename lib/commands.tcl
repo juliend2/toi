@@ -1,7 +1,11 @@
 
 proc ssh {command} {
   global host remote_pwd
-  catch { set retval [exec -ignorestderr ssh $host "cd $remote_pwd && $command"] } errmsg
+  catch { 
+    # assign the result of the SSH command into $retval:
+    set retval [exec -ignorestderr ssh $host "cd $remote_pwd && $command"] 
+  } errmsg
+  # if there was an error, it didn't set retval. so we set it to "":
   if { [info exists retval] == 0 } {
     set retval ""
   }
