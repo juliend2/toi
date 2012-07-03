@@ -7,7 +7,7 @@ proc ssh {command} {
   } errmsg
   # if there was an error, it didn't set retval. so we set it to "":
   if { [info exists retval] == 0 } {
-    set retval ""
+    set retval $errmsg
   }
   puts "\[remote\] $command: '$retval'"
 }
