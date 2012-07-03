@@ -15,6 +15,7 @@ proc deploy {} {
   ssh "git pull origin master"
 }
 ```
+(Note: toi.tcl must be executable)
 
 And on in the command line:
   
@@ -27,3 +28,4 @@ Installation
 1. `git clone git://github.com/juliend2/toi.git`
 1. now add this line to your `.bashrc` file: `export PATH=$PATH:~/bin/toi`
 1. `source ~/.bashrc`
+

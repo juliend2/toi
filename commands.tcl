@@ -27,3 +27,10 @@ proc rsync {src target {options "-azP --exclude=.git*"}} {
   set retval [exec sh -c $command]
   puts "\[local\] $command: $retval"
 }
+
+proc scp {src target {options ""}} {
+  set command "scp $options $src $target"
+  set retval [exec sh -c $command]
+  puts "\[local\] $command: $retval"
+}
+
