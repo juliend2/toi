@@ -1,0 +1,17 @@
+#!/usr/bin/env tclsh
+
+set task [lindex $argv 0]
+
+if {$task == ""} {
+  puts "Please tell me what task you want me to do."
+  exit
+}
+
+proc deploy {} {
+  puts "YEAH"
+}
+
+# execute the called task:
+$task
+
+# vim: set filetype=tcl
